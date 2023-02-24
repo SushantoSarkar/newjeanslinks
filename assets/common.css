@@ -1,12 +1,41 @@
-/* These styles are just to make it easier to see the blocks, initially. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Familjen+Grotesk:wght@400;700&display=swap');
 
-body { padding: 2em; }
+:root{
+    --body-copy:17px;
+    --body-copy-line-height: calc(var(--body-copy)*1.2);
+
+    --main-heading: 25vw;
+    --main-heading-line-height: calc(var(--main-heading));
+}
+
+body {
+	color: white;
+	background-color: rgb(0, 0, 41);
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+    font-family: 'Familjen Grotesk', serif;
+}
+
+/*HEADING*/
+.channel-title{
+	font-family: 'Bebas Neue', serif;
+	font-size: 30vw;
+	line-height: 15vw;
+	margin-top: 50px;
+}
+
+.sub-title{
+	font-family: 'Bebas Neue', serif;
+	font-size: 30vw;
+}
 
 a { color: blue; }
 em { font-style: italic; }
 strong { font-weight: bold; }
 
-body,
+body
 section,
 ul,
 figure {
