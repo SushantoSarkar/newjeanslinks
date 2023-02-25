@@ -36,21 +36,43 @@ p{
 	margin-bottom: 10px;
 }
 
-/*MEDIA FILTER*/
-.media{
-	display: flex;
-    flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    color: gray;
+/*FILTERS BUTTONS*/
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
-.tabs_radio {
-    display: none;
+.filter-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.filter-button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
 
 a { color: blue; }
 em { font-style: italic; }

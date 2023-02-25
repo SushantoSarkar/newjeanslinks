@@ -24,32 +24,31 @@
         <ul class="channel-owner channel-collaborator"></ul> <!-- Owner and collaborators. -->
     </section>
 
-    <!-- FILTERS -->
-    <div class="media">
-        <input type="radio" name="check" class="tabs_radio" id="pg1" checked>
-        <label for="tab1" class="filter"><i class="material-icons">apps</i></label>
+    <!-- FILTERS BUTTONS -->
+    <div class="button-container">
+        <button class="filter-button active" data-filter="all">Combined Patches</button>
         <div class="selected">
             <ul
                 class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
             </ul>
         </div>
 
-        <input type="radio" name="check" class="tabs_radio" id="pg2">
-        <label for="tab2" class="filter"><i class="material-icons">draw</i></label>
+        <button class="filter-button" data-filter="multimedia">Performances</button>
         <div class="selected">
-            <ul class="image-blocks"></ul>
+            <ul class="video-embed-blocks video-file-blocks">
+            </ul>
         </div>
 
-        <input type="radio" name="check" class="tabs_radio" id="pg3">
-        <label for="tab3" class="filter"><i class="material-icons">videocam</i></label>
+        <button class="filter-button" data-filter="social">Soundscapes</button>
         <div class="selected">
-            <ul class="video-embed-blocks video-file-blocks"></ul>
+            <ul class="audio-embed-block audio-file-block">
+            </ul>
         </div>
 
-        <input type="radio" name="check" class="tabs_radio" id="pg4">
-        <label for="tab4" class="filter"><i class="material-icons">music_note</i></label>
+        <button class="filter-button" data-filter="text">Social Links</button>
         <div class="selected">
-            <ul class="audio-embed-blocks audio-file-blocks"></ul>
+            <ul class="image-block link-block pdf-block text-block">
+            </ul>
         </div>
     </div>
 
@@ -77,160 +76,92 @@
             </a>
         </li>
     </template>
-    <!-- Spotify, Soundcloud, etc. -->
-    <template id="audio-embed-block">
-        <li>
-            <figure class="audio-embed"> <!-- You can use the container classes to style a whole type. -->
-                <h3 class="title"></h3> <!-- Block title inserts here. -->
-                <picture>
-                    <source class="image-thumb"> <!-- You will have to add the `media` if you want to use these. -->
-                    <source class="image-square">
-                    <source class="image-display">
-                    <img class="image"> <!-- Largest image/cover source inserts here. -->
-                </picture>
-                <div class="embed"></div> <!-- Embed iframe inserts here. -->
-                <a class="link"> <!-- Original URL inserts here. -->
-                    <p class="link-title"></p> <!-- Link title inserts here. -->
-                </a>
-                <figcaption class="description"></figcaption> <!-- Block description inserts here. -->
-                <p class="type"></p> <!-- Block type/kind inserts here. -->
-                <p class="time-updated"></p> <!-- When it was last updated. -->
-                <p class="time-created"></p> <!-- And first created. -->
-            </figure>
-        </li>
-    </template>
-    <!-- Uploaded audio files. -->
-    <template id="audio-file-block">
-        <li>
-            <figure class="audio-file-block">
-                <h3 class="title"></h3>
-                <picture>
-                    <source class="image-thumb">
-                    <source class="image-square">
-                    <source class="image-display">
-                    <img class="image">
-                </picture>
-                <audio class="audio" controls></audio> <!-- Audio source inserts here. -->
-                <figcaption class="description"></figcaption>
-                <p class="type"></p>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
-            </figure>
-        </li>
-    </template>
+
+
+    <!-- CONTENT -->
     <!-- Images. -->
     <template id="image-block">
         <li>
             <figure class="image-block">
-                <h3 class="title"></h3>
                 <picture>
-                    <source class="image-thumb">
-                    <source class="image-square">
                     <source class="image-display">
                     <img class="image">
                 </picture>
-                <a class="link">
-                    <p class="link-title"></p>
-                </a>
-                <figcaption class="description"></figcaption>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
             </figure>
         </li>
     </template>
-    <!-- Links (saved sites). -->
-    <template id="link-block">
-        <li>
-            <figure class="link-block">
-                <h3 class="title"></h3>
-                <picture>
-                    <source class="image-thumb">
-                    <source class="image-square">
-                    <source class="image-display">
-                    <img class="image">
-                </picture>
-                <a class="link">
-                    <p class="link-title"></p>
-                </a>
-                <figcaption class="description"></figcaption>
-                <p class="type"></p>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
-            </figure>
-        </li>
-    </template>
-    <!-- Did anyone add PDFs? -->
+
+    <!-- Articles / PDF's -->
     <template id="pdf-block">
         <li>
             <figure class="pdf-block">
-                <h3 class="title"></h3>
                 <picture>
-                    <source class="image-thumb">
-                    <source class="image-square">
                     <source class="image-display">
-                    <img class="image">
+                    <a class="link"><img class="image"></a>
                 </picture>
-                <a class="link"> <!-- PDF link inserts here. -->
-                    <p class="link-title"></p> <!-- Repeats the block title. -->
-                </a>
-                <figcaption class="description"></figcaption>
-                <p class="type"></p>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
             </figure>
         </li>
     </template>
-    <!-- Text. -->
-    <template id="text-block">
-        <li>
-            <figure class="text-block">
-                <h3 class="title"></h3>
-                <div class="content"></div> <!-- Text blocks insert their HTML here. -->
-                <figcaption class="description"></figcaption>
-                <p class="type"></p>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
-            </figure>
-        </li>
-    </template>
+
     <!-- YouTube, Vimeo, etc. -->
     <template id="video-embed-block">
         <li>
             <figure class="video-embed-block">
-                <h3 class="title"></h3>
                 <picture>
-                    <source class="image-thumb">
-                    <source class="image-square">
                     <source class="image-display">
-                    <img class="image">
+
+                    <a class="link"><img class="image"></a>
                 </picture>
-                <div class="embed"></div>
-                <a class="link">
-                    <p class="link-title"></p>
-                </a>
-                <figcaption class="description"></figcaption>
-                <p class="type"></p>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
             </figure>
         </li>
     </template>
+
     <!-- Uploaded video files. -->
     <template id="video-file-block">
         <li>
             <figure class="video-file-block">
-                <h3 class="title"></h3>
                 <picture>
-                    <source class="image-thumb">
-                    <source class="image-square">
                     <source class="image-display">
-                    <img class="image">
+                    <a class="link"><img class="image"></a>
                 </picture>
-                <video class="video" controls></video> <!-- Video source inserts here. -->
-                <figcaption class="description"></figcaption>
-                <p class="type"></p>
-                <p class="time-updated"></p>
-                <p class="time-created"></p>
+                <video class="video" controls></video>
+            </figure>
+        </li>
+    </template>
+
+    <!-- Links (saved sites). -->
+    <template id="link-block">
+        <li>
+            <figure class="link-block">
+                <picture>
+                    <source class="image-display">
+                    <a class="link"><img class="image"></a>
+                </picture>
+            </figure>
+        </li>
+    </template>
+
+    <!-- Spotify, Soundcloud, etc. -->
+    <template id="audio-embed-block">
+        <li>
+            <figure class="audio-embed"> <!-- You can use the container classes to style a whole type. -->
+                <picture>
+                    <source class="image-display">
+                    <a class="link"><img class="image"></a>
+                </picture>
+            </figure>
+        </li>
+    </template>
+
+    <!-- Uploaded audio files. -->
+    <template id="audio-file-block">
+        <li>
+            <figure class="audio-file-block">
+                <picture>
+                    <source class="image-display">
+                    <a class="link"><img class="image"></a>
+                </picture>
+                <audio class="audio" controls></audio>
             </figure>
         </li>
     </template>
