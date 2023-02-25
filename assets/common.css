@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Familjen+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
     --body-copy:17px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
-    --main-heading: 25vw;
+    --main-heading: 20vw;
     --main-heading-line-height: calc(var(--main-heading));
 }
 
@@ -15,20 +15,41 @@ body {
     margin: auto;
     padding: auto;
     width: 80%;
-    font-family: 'Familjen Grotesk', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*HEADING*/
 .channel-title{
-	font-family: 'Bebas Neue', serif;
-	font-size: 30vw;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3vw;
 	line-height: 15vw;
 	margin-top: 50px;
 }
 
 .sub-title{
-	font-family: 'Bebas Neue', serif;
-	font-size: 30vw;
+	font-family: 'ambidexter';
+	font-size: 16vw;
+	text-align: center;
+}
+
+p{
+	margin-bottom: 10px;
+}
+
+/*MEDIA FILTER*/
+.media{
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color: gray;
+}
+
+.tabs_radio {
+    display: none;
 }
 
 a { color: blue; }

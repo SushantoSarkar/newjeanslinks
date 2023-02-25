@@ -19,23 +19,47 @@
             <h1 class="channel-title"></h1>
             <!-- The channel title will be inserted inside this h1. -->
         </a>
-        <h2 class="sub-title">NewJeans</h2>
+        <h2 class="sub-title">New Jeans</h2>
         <div class="channel-description"></div> <!-- Same here for the channel description. -->
         <ul class="channel-owner channel-collaborator"></ul> <!-- Owner and collaborators. -->
     </section>
+
+    <!-- FILTERS -->
+    <div class="media">
+        <input type="radio" name="check" class="tabs_radio" id="pg1" checked>
+        <label for="tab1" class="filter"><i class="material-icons">apps</i></label>
+        <div class="selected">
+            <ul
+                class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+            </ul>
+        </div>
+
+        <input type="radio" name="check" class="tabs_radio" id="pg2">
+        <label for="tab2" class="filter"><i class="material-icons">draw</i></label>
+        <div class="selected">
+            <ul class="image-blocks"></ul>
+        </div>
+
+        <input type="radio" name="check" class="tabs_radio" id="pg3">
+        <label for="tab3" class="filter"><i class="material-icons">videocam</i></label>
+        <div class="selected">
+            <ul class="video-embed-blocks video-file-blocks"></ul>
+        </div>
+
+        <input type="radio" name="check" class="tabs_radio" id="pg4">
+        <label for="tab4" class="filter"><i class="material-icons">music_note</i></label>
+        <div class="selected">
+            <ul class="audio-embed-blocks audio-file-blocks"></ul>
+        </div>
+    </div>
+
     <section>
-        <h2 class="channel-count"></h2> <!-- How many blocks. -->
-        <!-- All the channel “blocks” will be created as children, here. -->
-        <!-- You could move the classes to different section elements to separate the types! -->
+        <h2 class="channel-count"></h2>
         <ul
             class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
         </ul>
     </section>
-    <!-- These are the templates for the various block types, below. -->
-    <!-- You can move/nest/remove any of the insertion points! -->
-    <!-- For example, you could only show images for actual image blocks. -->
-    <!-- You could not show the type if you group them by section, above. -->
-    <!-- Template for the channel owner. -->
+
     <template id="channel-owner">
         <li>
             <img class="avatar"> <!-- Avatar image source inserts here. -->
