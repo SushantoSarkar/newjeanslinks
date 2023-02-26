@@ -16,15 +16,38 @@
     <section>
         <!-- This URL is the channel connected to the API! -->
         <a href="https://www.are.na/giselle-lee/links-_arpadjcqgk" id="channel-url">
-            <h1 class="channel-title"></h1>
+            <h1 class="channel-title">New Jeans</h1>
             <!-- The channel title will be inserted inside this h1. -->
         </a>
         <h2 class="sub-title">New Jeans</h2>
         <div class="channel-description"></div> <!-- Same here for the channel description. -->
-        <ul class="channel-owner channel-collaborator">Sushanto & Giselle</ul> <!-- Owner and collaborators. -->
+        <ul class="channel-owner channel-collaborator"></ul> <!-- Owner and collaborators. -->
     </section>
 
-    <!-- FILTERS BUTTONS -->
+    <!-- FILTERS-BUTTONS -->
+    <div class="filter-buttons">
+        <button class="filter-button performances" onclick="openTab('performances-tab')">Performances</button>
+        <button class="filter-button soundscapes" onclick="openTab('soundscapes-tab')">Soundscapes</button>
+        <button class="filter-button social-links" onclick="openTab('social-links-tab')">Social Links</button>
+    </div>
+
+    <!-- FILTER-BUTTON TABS -->
+    <div class="tab-content">
+        <div id="performances-tab" class="tab-pane">
+            <ul class="video-embed-blocks video-file-blocks">
+            </ul>
+        </div>
+        <div id="soundscapes-tab" class="tab-pane">
+            <ul class="audio-embed-block audio-file-block">
+            </ul>
+        </div>
+        <div id="social-links-tab" class="tab-pane">
+            <ul class="image-block link-block pdf-block text-block">
+            </ul>
+        </div>
+    </div>
+
+    ________________________________________
     <!-- <div class="button-container">
         <button class="filter-button active" data-filter="all">Combined Patches</button>
         <div class="selected">
@@ -33,13 +56,13 @@
             </ul>
         </div>
 
-        <button class="filter-button" data-filter="multimedia">Performances</button>
+        <button class="filter-button" data-filter="Performances">Performances</button>
         <div class="selected">
             <ul class="video-embed-blocks video-file-blocks">
             </ul>
         </div>
 
-        <button class="filter-button" data-filter="social">Soundscapes</button>
+        <button class="filter-button" data-filter="audios">Soundscapes</button>
         <div class="selected">
             <ul class="audio-embed-block audio-file-block">
             </ul>
@@ -51,6 +74,8 @@
             </ul>
         </div>
     </div> -->
+    ________________________________________
+
 
     <section>
         <h2 class="channel-count"></h2>
@@ -61,18 +86,19 @@
 
     <template id="channel-owner">
         <li>
-            <img class="avatar"> <!-- Avatar image source inserts here. -->
-            <a class="link"> <!-- Link to their profile inserts here. -->
-                <p class="full-name"></p> <!-- Username inserts here. -->
+            <img class="avatar" src="https://www.are.na/giselle-lee"> <!-- Avatar image source inserts here. -->
+            <a class="https://www.are.na/giselle-lee"> <!-- Link to their profile inserts here. -->
+                <p class="full-name">Giselle Lee</p> <!-- Username inserts here. -->
             </a>
         </li>
     </template>
     <!-- And collaborator. -->
     <template id="channel-collaborator">
         <li>
-            <img class="avatar">
-            <a class="link">
-                <p class="full-name"></p>
+            <img class="avatar"
+                src="https://arena-avatars.s3.amazonaws.com/412400/large_727eddf0b5dc7305147f4cbe5510a213.jpg?1675234714">
+            <a class="https://www.are.na/sushanto-sarkar">
+                <p class="full-name">Sushanto Sarkar</p>
             </a>
         </li>
     </template>

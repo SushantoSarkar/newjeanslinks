@@ -38,12 +38,20 @@ p{
 }
 
 /*FILTERS BUTTONS*/
-.button-container {
+/* .button-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 10px;
+} */
+
+.tab-content .tab-pane {
+  display: none;
+}
+
+.tab-content .active {
+  display: block;
 }
 
 .filter-button {
