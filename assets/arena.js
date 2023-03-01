@@ -225,16 +225,3 @@ fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
 		window.arenaCallback?.()
 	})
 
-function openTab(tabName) {
-  var i, tabContent, tabButton;
-  tabContent = document.getElementsByClassName("tab-pane");
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].classList.remove("active");
-  }
-  tabButton = document.getElementsByClassName("filter-button");
-  for (i = 0; i < tabButton.length; i++) {
-    tabButton[i].classList.remove("active");
-  }
-  document.getElementById(tabName).classList.add("active");
-  event.currentTarget.classList.add("active");
-}
