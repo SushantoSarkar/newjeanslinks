@@ -35,16 +35,17 @@ body {
   margin-top: 1rem;
 }
 
-p{
-	
-}
 
 /*FILTERS BUTTONS*/
 .filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
   background-color: transparent;
   position:relative;
   padding: 1vh 1vh;
-  display: flex;
+  
   flex-direction: column;
   justify-content: space-evenly;
   left: 0;
@@ -74,10 +75,11 @@ p{
   color: var(--accent-2);
 }
 
-.filter-button :hover{
+.filter-button:hover{
   color: var(--accent-type);
-  border: var(--accent-type) solid 1.5px;
+  border: 3.5px dashed var(--accent-1);
   background-color: var(--accent-2);
+  transition: all 0.3s ease;
 }
 
 
@@ -126,7 +128,6 @@ img {
 
 .content-block{
   margin: 0.5rem;
-  
 }
 
 @media screen and (min-width: 500px) {
